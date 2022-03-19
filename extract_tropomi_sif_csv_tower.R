@@ -1,13 +1,11 @@
 library(terra)
-library(viridis)
-library(ncdf4)
 
 file_lists <- "G:/TROPOMI/esa/extracted/zoe/zoe_files.csv"
 site_list  <- "G:/TROPOMI/esa/extracted/zoe/zoe_sites.csv"
 out_dir    <- "G:/TROPOMI/esa/extracted/zoe/"
 csv_name   <- "Pierrat_TROPOMI_"
-var_list   <- c("NIRv", "NIRv_Rad", "SIF_743", "REF_665", "REF_781", "Mean_TOA_RAD_743",
-                "n", "NIRv_std", "NIRv_Rad_std", "SIF_743_std", "REF_665_std", "REF_781_std")
+var_list   <- c("SIF_743","SIF_Corr_743", "NIRv", "NIRv_Rad", "SIF_743", "REF_665", "REF_781", "Mean_TOA_RAD_743",
+                "n", "SIF_743_std", "SIF_Corr_743_std", "NIRv_std", "NIRv_Rad_std", "REF_665_std", "REF_781_std")
 
 get_tropomi_data <- function (file_list, site, out_dir, csv_name, var_list) {
   
